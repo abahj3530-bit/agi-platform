@@ -183,11 +183,12 @@
             window.scrollTop = window.scrollHeight;
 
             try {
-                const response = await fetch('/api/agi-brain', {
-                    method: 'POST',
-                    body: JSON.stringify({ prompt: message }),
-                    headers: { 'Content-Type': 'application/json' }
-                });
+                const response = await fetch('/api/agi-brain.js', { 
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ prompt: userMessage })
+});
+
 
                 const data = await response.json();
                 if (data.error) throw new Error(data.error);
