@@ -1,0 +1,11 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/agi-brain",
+      "destination": "/api/agi-brain.js"
+    }
+  ],
+  "env": {
+    "GEMINI_API_KEY": "@gemini_api_key"
+  }
+}
